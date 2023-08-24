@@ -5,16 +5,9 @@ const maxRecords = 151
 const limit = 10
 let offset = 0;
 
-// const listaItens = document.querySelectorAll("#pokemonList li")
-
-function nextPagePokemon() {
-    window.location.href='pokemonDetail.html'
-}
-
-
 function convertPokemonToLi(pokemon) {
     return `
-        <li onclick="nextPagePokemon()" class="pokemon ${pokemon.type}">
+        <li class="pokemon ${pokemon.type}">
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
 
@@ -52,3 +45,4 @@ loadMoreButton.addEventListener('click', () => {
         loadPokemonItens(offset, limit)
     }
 })
+
